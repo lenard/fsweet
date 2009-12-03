@@ -204,9 +204,8 @@ h2.date-header {
   }
 
 .post {
-  margin:.5em 0 1.5em;
-  border-bottom:1px dotted $bordercolor;
-  padding-bottom:1.5em;
+  margin:0px;
+  padding:0px;
   }
 .post h3 {
   margin:.25em 0 0;
@@ -227,15 +226,23 @@ h2.date-header {
 .post h3 strong, .post h3 a:hover {
   color:$textcolor;
 }
+.post h3.post-title {
+ display:none; 
+}
 
 .post-body {
-  margin:0 0 .75em;
+  margin:0px;
   line-height:1.6em;
 }
 
 .post-body blockquote {
-  line-height:1.3em;  
+  line-height:1.3em;
 }
+
+.post-body p{
+  margin:0px;
+}
+
 
 .post-footer {
   margin: .75em 0;
@@ -250,8 +257,7 @@ h2.date-header {
   margin-$startSide:.6em;
   }
 .post img {
-  padding:4px;
-  border:1px solid $bordercolor;
+  padding:0px;
   }
 .post blockquote {
   margin:1em 20px;
@@ -302,14 +308,17 @@ h2.date-header {
 
 #blog-pager-newer-link {
   float: $startSide;
+  display:none;
  }
  
 #blog-pager-older-link {
   float: $endSide;
+  display:none;
  }
 
 #blog-pager {   
   text-align: center; 
+  display:none;
  }
 
 /* Sidebar Content
