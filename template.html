@@ -226,8 +226,41 @@ h2.date-header {
 .post h3 strong, .post h3 a:hover {
   color:$textcolor;
 }
-.post h3.post-title {
+.post h3.post-title{
  display:none; 
+}
+
+#menubar{
+  height: 26px;
+  margin: 0;
+  x-index: 10px
+}
+#menubar .menubar-home{
+  background: #ffffff url('http://2.bp.blogspot.com/_cGmPXR__BjY/Sx22HfQttpI/AAAAAAAABx0/mfTapQuuasA/s1600/menubar.png') no-repeat 0px -1px;
+  height: 26px;
+  width: 110px;
+  float: left;
+}
+#menubar .menubar-about{
+  background: #ffffff url('http://2.bp.blogspot.com/_cGmPXR__BjY/Sx22HfQttpI/AAAAAAAABx0/mfTapQuuasA/s1600/menubar.png') no-repeat -165px -1px;
+  height: 26px;
+  width: 110px;
+  float: left;
+  margin-left: 55px
+}
+#menubar .menubar-gallery{
+  background: #ffffff url('http://2.bp.blogspot.com/_cGmPXR__BjY/Sx22HfQttpI/AAAAAAAABx0/mfTapQuuasA/s1600/menubar.png') no-repeat -330px -1px;
+  height: 26px;
+  width: 110px;
+  float: left;
+  margin-left: 55px
+}
+#menubar .menubar-contact{
+  background: #ffffff url('http://2.bp.blogspot.com/_cGmPXR__BjY/Sx22HfQttpI/AAAAAAAABx0/mfTapQuuasA/s1600/menubar.png') no-repeat -490px -1px;
+  height: 26px;
+  width: 110px;
+  float: left;
+  margin-left: 50px
 }
 
 .post-body {
@@ -265,6 +298,31 @@ h2.date-header {
 .post blockquote p {
   margin:.75em 0;
   }
+  
+#fs-home-page{
+  background: #ffffff url('http://4.bp.blogspot.com/_cGmPXR__BjY/SxdCswND72I/AAAAAAAABxM/ZzBQWeZAhoM/s640/home.png') no-repeat 0px -26px;
+  height:385px;
+  width: 600px;
+}
+
+#fs-about-page{
+  background: #ffffff url('http://3.bp.blogspot.com/_cGmPXR__BjY/Sx3CcdZGafI/AAAAAAAABx8/xRI9Qma6MEo/s1600/about_us.png') no-repeat 0px -26px;
+  height:385px;
+  width: 600px;
+}
+
+#fs-gallery-page{
+  background: #ffffff url('http://2.bp.blogspot.com/_cGmPXR__BjY/Sx3Rx3HntZI/AAAAAAAAByM/_jsAcThOS-g/s1600/cupcakes600.jpg') no-repeat 0px 0px;
+  height:600px;
+  width: 800px;
+  overflow: show;
+}
+
+#fs-contact-page{
+  background: #ffffff url('http://1.bp.blogspot.com/_cGmPXR__BjY/SxdCUtfJneI/AAAAAAAABxE/Du8EWqlNfl8/s640/about.png') no-repeat 0px -26px;
+  height:385px;
+  width: 600px;
+}
 
 /* Comments
 ----------------------------------------------- */
@@ -408,6 +466,10 @@ h2.date-header {
   border-top: 1px solid #1C0A05;
 }
 ]]></b:skin>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("jquery", "1.3.2"); //load version 1.3.2 of jQuery
+</script>
   </head>
 
   <body>
@@ -430,19 +492,17 @@ h2.date-header {
       <div id='crosscol-wrapper' style='text-align:center'>
         <b:section class='crosscol' id='crosscol'/>
       </div>
-
+      
       <div id='main-wrapper'>
+        <div id='menubar'>
+          <a href='http://fortunatelysweet.blogspot.com/2009/12/home.html'><div class='menubar-home'></div></a>
+          <a href='http://fortunatelysweet.blogspot.com/2009/12/about-us.html'><div class='menubar-about'></div></a>
+          <a href='http://fortunatelysweet.blogspot.com/2009/12/gallery.html'><div class='menubar-gallery'></div></a>
+          <a href='http://fortunatelysweet.blogspot.com/2009/12/contact-us.html'><div class='menubar-contact'></div></a>
+        </div>
         <b:section class='main' id='main' showaddelement='no'>
-<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'/>
-</b:section>
-      </div>
-
-      <div id='sidebar-wrapper'>
-        <b:section class='sidebar' id='sidebar' preferred='yes'>
-<b:widget id='Image1' locked='false' title='' type='Image'/>
-<b:widget id='Image2' locked='false' title='' type='Image'/>
-<b:widget id='BlogArchive1' locked='false' title='Sweet Times' type='BlogArchive'/>
-</b:section>
+          <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'/>
+        </b:section>
       </div>
 
       <!-- spacer for skins that want sidebar and main to be the same height-->
@@ -451,11 +511,17 @@ h2.date-header {
     </div> <!-- end content-wrapper -->
 
     <div id='footer-wrapper'>
-      <b:section class='footer' id='footer'>
-<b:widget id='Text1' locked='false' title='' type='Text'/>
-</b:section>
     </div>
 
   </div></div> <!-- end outer-wrapper -->
-</body>
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-11964422-1");
+  pageTracker._trackPageview();
+  } catch(err) {}</script>
+  </body>
 </html>
