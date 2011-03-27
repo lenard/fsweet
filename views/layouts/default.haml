@@ -7,25 +7,19 @@
     %link{:rel => 'stylesheet', :href => "/css/960.css"}
     %link{:rel => 'stylesheet', :href => "/css/text.css"}
     %link{:rel => 'stylesheet', :href => "/style.css"}
-
+    %link{:rel => 'shortcut icon', :href => "/images/favicon.png"}
+    
     %script{:src => "/js/jquery.min.js"}
     %script{:src => "/js/jquery-ui-1.8.1.custom.min.js"}
 
   %body
-    .top_nav_wrapper
-      .container_12
-        .grid_12
-          = link_to_unless_current("home", "/")
-          |
-          = link_to_unless_current("about", "/about")
-          |
-          = link_to_unless_current("form", "/form")
-      .clear
-
-    .container_12
-      .grid_12
-        %h1 a sinatra app skeleton that works on heroku
-        %h4 2010-06-11
-
+    .centerbox.container_12
+      = img("header.png")
       = yield
+    
+    
+    %footer
+      %p
+        Richmond Hill, Ontario Canada&nbsp;&nbsp;|&nbsp;&nbsp;  
+        = link_to "fortunatelysweet@gmail.com", "mailto:info@thecupcakeshopperaleigh.com"
 

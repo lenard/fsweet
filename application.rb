@@ -23,6 +23,11 @@ class SkeletonApp < Sinatra::Base
         link_to text, url
       end
     end
+    
+    def img(name)
+      "<img src='images/#{name}' alt='#{name}' />"
+    end
+    
   end
 
   # SASS stylesheet
