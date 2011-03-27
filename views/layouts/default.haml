@@ -34,17 +34,43 @@
     
   %body
     .centerbox.container_12
-      = img("header.png")
+      .header
+        .logo= img("header-1.png")
+        .top_nav_wrapper
+          .container_12
+            .grid_12
+              = link_to_unless_current("Home", "/")
+              |
+              = link_to_unless_current("About Us", "/about")
+              |
+              = link_to_unless_current("Gallery", "/gallery")
+              |
+              = link_to_unless_current("Contact Us", "/contact")
+      
+      
       = yield
     
     
+    
+    
+    
+    
+    
+    
+    
+    
     %footer
-      %p
-        Richmond Hill, Ontario Canada
-        &nbsp;&nbsp;|&nbsp;&nbsp;  
-        = link_to "fortunatelysweet@gmail.com", "mailto:info@thecupcakeshopperaleigh.com"
-        
-        .mixpanel_badge.center
+      .container_12
+        %span
+          Richmond Hill, Ontario Canada
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          = link_to "fortunatelysweet@gmail.com", "mailto:info@thecupcakeshopperaleigh.com"
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+        %span{:style=>"top:40px;position:relative;"}
           :plain
-            <a href="http://mixpanel.com/?from=partner"> <img src="http://mixpanel.com/site_media/images/mixpanel_partner_logo.gif" alt="Mobile Analytics by Mixpanel" /> </a>
+            <iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FFortunately-Sweet%2F131772926834814&amp;width=200&amp;colorscheme=light&amp;show_faces=false&amp;stream=false&amp;header=true&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:62px;" allowTransparency="true"></iframe>
+      
+      .mixpanel_badge.center.hidden
+        :plain
+          <a href="http://mixpanel.com/?from=partner"> <img src="http://mixpanel.com/site_media/images/mixpanel_partner_logo.gif" alt="Mobile Analytics by Mixpanel" /> </a>
 
