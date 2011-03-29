@@ -35,18 +35,29 @@
   %body
     .centerbox.container_12
       .header
-        .logo= img("header-1.png")
+        .logo= img("FSFlower.png")
         .top_nav_wrapper
-          .container_12
-            .grid_12
+          .container_12.bold
+            .grid_2
+              &nbsp;
+            .grid_3{:style=>"text-align:right"}
               = link_to_unless_current("Home", "/")
-              |
+              &nbsp;&nbsp;|&nbsp;&nbsp;
               = link_to_unless_current("About Us", "/about")
-              |
+              &nbsp;&nbsp;
+              
+            .grid_2
+              &nbsp;
+            .grid_3{:style=>"text-align:left"}
+              &nbsp;&nbsp;
               = link_to_unless_current("Gallery", "/gallery")
-              |
+              &nbsp;&nbsp;|&nbsp;&nbsp;
               = link_to_unless_current("Contact Us", "/contact")
+            .clear
       
+      %br
+      %br
+      %br
       
       = yield
     

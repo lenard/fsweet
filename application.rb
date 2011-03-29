@@ -28,6 +28,10 @@ class SkeletonApp < Sinatra::Base
       "<img src='images/#{name}' alt='#{name}' />"
     end
     
+    def photo(name)
+      "<div class='thin_border_outer'><img src='photos/#{name}' alt='#{name}' class='thin_border' /></div>"
+    end
+    
   end
 
   # SASS stylesheet
