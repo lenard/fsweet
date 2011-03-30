@@ -31,10 +31,6 @@ class SkeletonApp < Sinatra::Base
     def photo(name)
       "<div class='thin_border_outer'><img src='photos/#{name}' alt='#{name}' class='thin_border' /></div>"
     end
-    def photo_h(name)
-      "<div class='thin_border_outer hidden'><img src='photos/#{name}' alt='#{name}' class='thin_border' /></div>"
-    end
-      
     
     
   end

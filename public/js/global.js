@@ -33,19 +33,17 @@ jQuery.extend(jQuery.expr[":"],{
 
 // add rotation code here
 function rotate_images(){
-  //console.log(Date.now() + " " + $('#rotate .thin_border_outer.hidden').size());
-  var a=$('#rotate .thin_border_outer:visible');
-  var b=$('#rotate .thin_border_outer:hidden:random');
+  console.log(Date.now());
+  var a=$('#rotate .thin_border_outer:last');
   //fade out
-  a.fadeOut(300, function(){
-    a.addClass('hidden');
-    // //fade in
-    b.fadeIn(300).removeClass('hidden');
+  a.fadeTo(1000,0.0,function(){
+    $('#rotate').prepend(a);
+    a.fadeTo(1,1.0);
   });
   setTimeout(function(){rotate_images()},3000);
 }
 rotate_images();
-// $('#rotate .thin_border_outer:visible:random').fadeTo(500, 0.0).addClass('hidden')
-// $('#rotate .thin_border_outer:hidden:random').fadeTo(500, 1.0).removeClass('hidden')
+// $('#rotate .thin_border_outer:first').fadeTo(500, 0.0).addClass('hidden') // fade out
+// $('#rotate .thin_border_outer:hidden:random').fadeTo(500, 1.0).removeClass('hidden') // fade in
 
 
