@@ -31,6 +31,11 @@ class SkeletonApp < Sinatra::Base
     def photo(name)
       "<div class='thin_border_outer'><img src='photos/#{name}' alt='#{name}' class='thin_border' /></div>"
     end
+    def photo_h(name)
+      "<div class='thin_border_outer hidden'><img src='photos/#{name}' alt='#{name}' class='thin_border' /></div>"
+    end
+      
+    
     
   end
 
@@ -48,19 +53,27 @@ class SkeletonApp < Sinatra::Base
     haml :about, :layout => :'layouts/default'
   end
 
-  get '/form' do
-    %{ <form action="/name" method="post">
-          <input name="person" type="text">
-          <input type="submit">
-       </form> }
+  get '/gallery' do
+    haml :gallery, :layout => :'layouts/default'
   end
 
-  post '/name' do
-    haml "Hello #{ params[:person] }", :layout => :'layouts/default'
+  get '/contact' do
+    haml :contact, :layout => :'layouts/default'
   end
 
-  get "/user/:id" do
-    "You're looking for user with id #{ params[:id] }"
-  end
+  # get '/form' do
+  #   %{ <form action="/name" method="post">
+  #         <input name="person" type="text">
+  #         <input type="submit">
+  #      </form> }
+  # end
+  # 
+  # post '/name' do
+  #   haml "Hello #{ params[:person] }", :layout => :'layouts/default'
+  # end
+  # 
+  # get "/user/:id" do
+  #   "You're looking for user with id #{ params[:id] }"
+  # end
 end
 
