@@ -1,3 +1,15 @@
 $:.unshift Dir.pwd
-require 'application'
-run SkeletonApp
+
+require 'rubygems'
+require 'bundler'
+Bundler.setup
+
+require 'haml'
+require 'sass'
+require 'sinatra'
+require 'lib/partials'
+
+# require 'config/database'
+
+require 'app'
+run App

@@ -1,21 +1,26 @@
-# require 'haml'
-gem 'sinatra', '= 1.0'
-require 'sinatra/base'
-# require 'config/database'
-require 'haml'
-require 'sass'
-
-class SkeletonApp < Sinatra::Base
-  set :session, true
-  set :haml, {:format => :html5 }
-  set :root, File.dirname(__FILE__)
-  set :public, Proc.new { File.join(root, "public") }
-
+class App < Sinatra::Base
+  helpers Sinatra::Partials
+  
+  configure do
+    set :root, File.dirname(__FILE__)
+    
+    # Configure public directory
+    set :public, Proc.new { File.join(root, "public") }
+    
+    # Configure HAML and SASS
+    set :haml, { :format => :html5 }
+    set :sass, { :style => :compressed } if ENV['RACK_ENV'] == 'production'
+    
+    # session storage ? using cookies most likely
+    set :session, true
+  end
+  
+  
   helpers do
     def link_to text, url=nil
       haml "%a{:href => '#{ url || text }'} #{ text }"
     end
-
+    
     def link_to_unless_current text, url=nil
       if url == request.path_info
         text
@@ -31,16 +36,17 @@ class SkeletonApp < Sinatra::Base
     def photo(name)
       "<div class='thin_border_outer'><img src='photos/#{name}' alt='#{name}' class='thin_border' /></div>"
     end
-    
-    
   end
-
+  
   # SASS stylesheet
-  get '/style.css' do
+  get "/css/style.css" do
     headers 'Content-Type' => 'text/css; charset=utf-8'
-    sass :style
+    sass :"css/style"
   end
-
+  
+  
+  
+  
   get '/' do
     haml :index, :layout => :'layouts/default'
   end
