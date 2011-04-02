@@ -21,16 +21,19 @@ $default_rounding: 3px
   +bottom_rounding($rounding)
 
 
+$light_pink: #F9E2E2
+$dark_brown: #1C0A05
+
+
 a
-  color: #1C0A05
+  color: $dark_brown
 
 body
   //  background-color: #D4A0AD
-  background-color: #F9E2E2
-  padding-top: 150px 
+  background-color: #fff
+  padding-top: 120px 
   font-family: arial, helvetica
   font-size: 14px
-  
 
 
 .center
@@ -39,8 +42,8 @@ body
 
 .centerbox
   text-align: center
-  background-color: white
-  border: 5px solid #1C0A05
+  background-color: $light_pink
+  border: 5px solid $dark_brown
   -webkit-border-radius: 52px
   -moz-border-radius: 52px
   border-radius: 52px
@@ -72,7 +75,7 @@ footer
   font-family: helvetica
   font-size: 14px
   padding: 10px
-  color: #1C0A05
+  color: $dark_brown
   text-align: justify
   column-width: 200px
   column-gap: 10px
@@ -83,42 +86,40 @@ footer
 
 // PHOTO stuff
 .thin_border_outer
-  border: 1px solid #1C0A05
-  -webkit-border-radius: 22px
-  -moz-border-radius: 22px
-  border-radius: 22px
-  -webkit-transform: rotate(0.0deg)
-  -moz-transform: rotate(0.0deg)
   height: 362px
   width: 462px
   overflow: hidden
-  
-  -moz-box-shadow: 2px 2px 5px #888
-  -webkit-box-shadow: 2px 2px 5px #888
-  box-shadow: 2px 2px 5px #888
-  
   position: absolute
-
+  
+  border: 1px solid $dark_brown
+  -webkit-border-radius: 22px
+  -moz-border-radius: 22px
+  border-radius: 22px
+  
+  -webkit-transform: rotate(0.0deg)
+  -moz-transform: rotate(0.0deg)
+  
+  -moz-box-shadow: 1px 1px 3px #888
+  -webkit-box-shadow: 1px 1px 3px #888
+  box-shadow: 1px 1px 3px #888
+  
+  
 .thin_border
+  height: 350px
+  width: 450px
+  padding: 0px
+  margin: 0px
+  overflow: hidden
+  
   border: 6px solid #fff
   -webkit-border-radius: 22px
   -moz-border-radius: 22px
   border-radius: 22px
   
-  padding: 0px
-  margin: 0
-  overflow: hidden
-  
-  height: 350px
-  width: 450px
-  
-  
   
 
 
 
-//  .mixpanel_badge
-  
 
 
 
@@ -126,7 +127,7 @@ footer
 // TEMP STUFF
 
 .brown
-  border: 1px solid #1C0A05
+  border: 1px solid $dark_brown
 
 .red
   border: 1px solid red

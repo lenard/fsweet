@@ -46,14 +46,17 @@ class SkeletonApp < Sinatra::Base
   end
 
   get '/about' do
+    @title = "Fortunately Sweet : About Us"
     haml :about, :layout => :'layouts/default'
   end
 
   get '/gallery' do
+    @title = "Fortunately Sweet : Cupcake Gallery"
     haml :gallery, :layout => :'layouts/default'
   end
 
   get '/contact' do
+    @title = "Fortunately Sweet : Contact Us"
     haml :contact, :layout => :'layouts/default'
   end
 
