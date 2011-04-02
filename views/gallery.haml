@@ -2,8 +2,23 @@
   .grid_6{:style=>"height:350px"}
     
     #rotate
+      = photo("spaghetti.jpg")
+      = photo("flowers.jpg")
+      = photo("valentine.jpg")
       = photo("white.jpg")
       
       
   .grid_6
-    .right_text
+    #rotate2
+      = photo("wreath.jpg")
+      = photo("xmas.jpg")
+      = photo("candycane.jpg")
+      = photo("monogram.jpg")
+
+
+
+// MAIN 
+:javascript
+  $(document).ready(function() {
+    setTimeout(function(){rotate_images('#rotate2')},7500);
+  });

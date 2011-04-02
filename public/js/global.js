@@ -18,22 +18,22 @@ jQuery.extend(jQuery.expr[":"],{
 });
 
 // add rotation code here
-function rotate_images(){
-  if( $('#rotate .thin_border_outer').size()>1 ){
-    var a=$('#rotate .thin_border_outer:last');
+function rotate_images(id){
+  if( $(id+' .thin_border_outer').size()>1 ){
+    var a=$(id+' .thin_border_outer:last');
     //fade out
     a.fadeTo(1000,0.0,function(){
-      $('#rotate').prepend(a);
+      $(id).prepend(a);
       a.fadeTo(1,1.0);
     });
-    setTimeout(function(){rotate_images()},3000);
+    setTimeout(function(){rotate_images(id)},3000);
   }
 }
 
 
 // MAIN 
 $(document).ready(function() {
-  setTimeout(function(){rotate_images()},6000);
+  setTimeout(function(){rotate_images('#rotate')},6000);
   
   // convert images into background divs
   if (hasBorderRadius()) {
