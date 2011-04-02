@@ -1,24 +1,21 @@
-$default_rounding: 3px
+@import reset
+// @import base
+@import hashgrid
+@import grid-960
+// @import plugins
 
-=top_rounding($rounding: $default_rounding)
-  -moz-border-radius-topleft: $rounding
-  -webkit-border-top-left-radius: $rounding
-  border-top-left-radius: $rounding
-  -moz-border-radius-topright: $rounding
-  -webkit-border-top-right-radius: $rounding
-  border-top-right-radius: $rounding
+// Uncomment below to include type, grid and color stylesheets. These are included to
+// keep css logically separated
 
-=bottom_rounding($rounding: $default_rounding)
-  -moz-border-radius-bottomleft: $rounding
-  -webkit-border-bottom-left-radius: $rounding
-  border-bottom-left-radius: $rounding
-  -moz-border-radius-bottomright: $rounding
-  -webkit-border-bottom-right-radius: $rounding
-  border-bottom-right-radius: $rounding
+// @import type
+// @import grid
+// @import colors
 
-=full_rounding($rounding: $default_rounding)
-  +top_rounding($rounding)
-  +bottom_rounding($rounding)
+@import handheld
+@import print
+
+
+// Custom Styles go here
 
 
 $light_pink: #F9E2E2
@@ -32,13 +29,10 @@ body
   //  background-color: #D4A0AD
   background-color: #fff
   padding-top: 120px 
-  font-family: arial, helvetica
+  font-family: helvetica, arial
   font-size: 14px
+  line-height: 150%
 
-
-.center
-  text-align: center
-  
 
 .centerbox
   text-align: center
@@ -149,4 +143,5 @@ footer
 .bold
   font-weight: bold
 
-
+.center
+  text-align: center

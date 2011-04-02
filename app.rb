@@ -39,9 +39,9 @@ class App < Sinatra::Base
   end
   
   # SASS stylesheet
-  get "/css/style.css" do
+  get "/css/global.css" do
     headers 'Content-Type' => 'text/css; charset=utf-8'
-    sass :"css/style"
+    sass :"css/global"
   end
   
   

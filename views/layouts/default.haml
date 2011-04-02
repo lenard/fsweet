@@ -2,15 +2,37 @@
 %html{:lang => "en"}
   %head
     %meta{:charset => "UTF-8"}/
-    %title= @title || "Fortunately Sweet"
-    %link{:rel => 'stylesheet', :href => "/css/reset.css"}
-    %link{:rel => 'stylesheet', :href => "/css/960.css"}
-    %link{:rel => 'stylesheet', :href => "/css/text.css"}
-    %link{:rel => 'stylesheet', :href => "/style.css"}
-    %link{:rel => 'shortcut icon', :href => "/images/favicon.png"}
+    -# Always force latest IE rendering engine (even in intranet) & Chrome Frame. Remove this if you use the .htaccess
+    %meta{ :'http-equiv' => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
     
-    %script{:src => "/js/jquery.min.js"}
-    %script{:src => "/js/global.js"}
+    %title= @title || "Fortunately Sweet"
+    %meta{:name => "description", :content => "" }
+    %meta{:name => "keywords",    :content => "Richmond Hill, Markham, Thornhill, Cupcakes" }
+    %meta{:name => "author",      :content => "Nikki" }
+    
+    -# Mobile Viewport Fix
+    -# j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
+    -# device-width : Occupy full width of the screen in its current orientation
+    -# initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+    -# maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
+    %meta{ :name => "viewport", :content => "width=device-width; initial-scale=1.0; maximum-scale=1.0;" }
+    
+    -# Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references
+    %link{ :rel => "shortcut icon", :href => "/favicon.png" }
+    %link{ :rel => "apple-touch-icon", :href => "favicon.png"} 
+    -#"/apple-touch-icon.png" }
+    
+    -# CSS : implied media="all"
+    %link{:rel => "stylesheet", :href => "/css/global.css", :type => "text/css"}
+    
+    -# No longer needed, included in main stylesheet with a media query
+    -# For the less-enabled mobile browsers like Opera Mini
+    -# %link{ :rel => "stylesheet", :media => "handheld", :href => "/css/handheld.css" }
+    
+    -# All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects
+    %script{ :src => "/js/modernizr-1.5.min.js" }
+    
+    
     
   %body
     .centerbox.container_12
@@ -48,45 +70,5 @@
     
     
     
+    = partial 'layouts/footer'
     
-    %footer
-      .container_12
-        %span
-          Richmond Hill, Ontario Canada
-          &nbsp;&nbsp;|&nbsp;&nbsp;
-          = link_to "fortunatelysweet@gmail.com", "mailto:info@fortunatelysweet@gmail.com"
-          &nbsp;&nbsp;|&nbsp;&nbsp;
-        
-        / FACEBOOK
-        %span{:style=>"top:40px;position:relative;"}
-          :plain
-            <iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FFortunately-Sweet%2F131772926834814&amp;width=230&amp;colorscheme=light&amp;show_faces=false&amp;stream=false&amp;header=true&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:230px; height:62px;" allowTransparency="true"></iframe>
-      
-      / MIXPANEL BADGE
-      / .mixpanel_badge.center.hidden
-      /   :plain
-      /     <a href="http://mixpanel.com/?from=partner"> <img src="http://mixpanel.com/site_media/images/mixpanel_partner_logo.gif" alt="Mobile Analytics by Mixpanel" /> </a>
-  
-  
-  
-  / MIXPANEL TRACKING
-  -# NOTE: i can't find a use for this at the moment...
-  -#:plain
-  -#  <script type='text/javascript'> var mp_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://'); document.write(unescape('%3Cscript src="' + mp_protocol + 'api.mixpanel.com/site_media/js/api/mixpanel.js" type="text/javascript"%3E%3C/script%3E')); </script> <script type='text/javascript'> try {  var mpmetrics = new MixpanelLib('f614cf4662269fb1840a1fd0efea65ce'); } catch(err) { null_fn = function () {}; var mpmetrics = {  track: null_fn,  track_funnel: null_fn,  register: null_fn,  register_once: null_fn, register_funnel: null_fn }; } </script>
-    
-  / GOOGLE ANALYTICS TRACTING
-  :plain
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-11964422-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-  
