@@ -49,8 +49,10 @@ class App < Sinatra::Base
     sass :"css/global"
   end
   
-  
-  
+  # root level favicon.png
+  get '/favicon.png' do
+    send_file 'favicon.png', :disposition => 'inline'
+  end  
   
   get '/' do
     haml :index, :layout => :'layouts/default'
