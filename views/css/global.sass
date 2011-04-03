@@ -51,6 +51,9 @@ body
     position: relative
     top: -120px
     height: 10px
+    -webkit-transform: rotate(0.0deg)
+    -moz-transform: rotate(0.0deg)
+    
     
 
 footer
@@ -74,43 +77,84 @@ footer
   column-width: 200px
   column-gap: 10px
   
-
+// GALLERY
+.small_outer
+  width: 100px
+  height: 100px
+  float: left
+  padding: 5px
+  
+  &.hover
+    .outer_border
+      border: 1px solid $dark_brown !important
+    .inner_border
+      border: 2px solid $dark_brown !important
+  
 
 
 
 // PHOTO stuff
-.thin_border_outer
-  height: 362px
-  width: 458px
+.outer_border
   overflow: hidden
   position: absolute
   
   border: 1px solid $dark_brown
-  -webkit-border-radius: 22px
-  -moz-border-radius: 22px
-  border-radius: 22px
   
-  -webkit-transform: rotate(0.0deg)
-  -moz-transform: rotate(0.0deg)
+  -webkit-transform: rotate(-0.0deg)
+  -moz-transform: rotate(-0.0deg)
   
   -moz-box-shadow: 1px 1px 3px #888
   -webkit-box-shadow: 1px 1px 3px #888
   box-shadow: 1px 1px 3px #888
   
-  img
-    height: 350px
-    width: 446px
+  &.small
+    width: 100px
+    height: 100px
+    
+    -webkit-border-radius: 10px
+    -moz-border-radius: 10px
+    border-radius: 10px
+    
+    img
+      height: 96px
+      width: 96px
+      
+    .inner_border
+      border: 2px solid #fff
+      background-size: 150%
+      
+      -webkit-border-radius: 10px
+      -moz-border-radius: 10px
+      border-radius: 10px
+    
+    
   
-  
-  
+  &.big
+    height: 362px
+    width: 458px
+    
+    -webkit-border-radius: 22px
+    -moz-border-radius: 22px
+    border-radius: 22px
+    
+    img
+      height: 350px
+      width: 446px
+    
+    .inner_border
+      border: 6px solid #fff
+      -webkit-border-radius: 22px
+      -moz-border-radius: 22px
+      border-radius: 22px
+    
+
+
+
 .thin_border
   padding: 0px
   margin: 0px
   
-  border: 6px solid #fff
-  -webkit-border-radius: 22px
-  -moz-border-radius: 22px
-  border-radius: 22px
+  
   
   
 

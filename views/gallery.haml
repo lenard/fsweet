@@ -5,20 +5,24 @@
       = photo("spaghetti.jpg")
       = photo("flowers.jpg")
       = photo("valentine.jpg")
-      = photo("white.jpg")
+      = photo("vanilla.png")
       
       
-  .grid_6
+  .grid_6{:style=>"padding-top:15px"}
+    
     #rotate2
-      = photo("wreath.jpg")
-      = photo("xmas.jpg")
-      = photo("candycane.jpg")
-      = photo("monogram.jpg")
-
-
-
-// MAIN 
-:javascript
-  $(document).ready(function() {
-    setTimeout(function(){rotate_images('#rotate2')},7500);
-  });
+      .small_outer= small_photo("michelle.jpg")
+      .small_outer= small_photo("flowers.jpg")
+      .small_outer= small_photo("pinkcupcake.jpg")
+      .small_outer= small_photo("balls.jpg")
+      
+      .small_outer= small_photo("redchoc.png")
+      .small_outer= small_photo("xmas7.png")
+      .small_outer= small_photo("diffcolours.png")
+      .small_outer= small_photo("xmas6.png")
+      
+      .small_outer= small_photo("xmas5.png")
+      .small_outer= small_photo("bears.png")
+      .small_outer= small_photo("vday.png")
+      .small_outer= small_photo("a.png")
+      

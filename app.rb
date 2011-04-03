@@ -34,8 +34,13 @@ class App < Sinatra::Base
     end
     
     def photo(name)
-      "<div class='thin_border_outer'><img src='photos/#{name}' alt='#{name}' class='thin_border' /></div>"
+      "<div class='big outer_border'><img src='photos/#{name}' alt='#{name}' class='inner_border' /></div>"
     end
+    
+    def small_photo(name)
+      "<div class='small outer_border'><img src='photos/#{name}' alt='#{name}' class='inner_border' /></div>"
+    end
+    
   end
   
   # SASS stylesheet
