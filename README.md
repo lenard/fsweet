@@ -1,10 +1,3 @@
-A simple web app skeleton. Uses bundler for dependencies. `bundle install` gets
-all.
-
-Hosted at: [http://node-sinatra-example.heroku.com/](http://node-sinatra-example.heroku.com/)
-
-Source at: [http://github.com/abachman/heroku-sinatra-skeleton](http://github.com/abachman/heroku-sinatra-skeleton)
-
 This is *not* the simplest possible sinatra app. I left enough loose threads
 dangling that getting moderately complex sinatra apps up to speed quickly won't
 be difficult.
@@ -19,14 +12,6 @@ documentation](http://code.macournoyer.com/thin/usage/) for more configuration
 options.
 
 # Folders
-
-## config/
-
-Right now it's just database configuration. You'll have to make sure postgres is
-installed and active on your personal machine for it to run locally.
-
-Because this is a skeleton for me, I want it, if you don't want it, you can safely
-delete the whole folder.
 
 ## public/
 
@@ -74,7 +59,7 @@ To render a view inside a layout, pass the layout option in:
 
 # Other Files
 
-## application.rb
+## app.rb
 
 the source. Define new URL handlers with get or post (delete and put should also work):
 
@@ -98,10 +83,3 @@ To add params to paths, use `:whatever` in the url string:
     get "/user/:id" do
       "You're looking for user with id #{ params[:id] }"
     end
-
----
-
-That should be enough to get you started.
-
-No tests. Could not, in the two hours I had, get a simple install of cucumber
-and rspec to play nicely. I suggest following [the Sinatra testing guidelines](http://www.sinatrarb.com/testing.html).
