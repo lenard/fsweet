@@ -2,14 +2,18 @@
   %p{:style=>"color:green "}
     %strong Your message has been sent! Thanks!
   
+- elsif @try_again
+  %p{:style=>"color:red "}
+    %strong Could not send your message, please check your email address and try again.
+
 - else
   %p
     Feel free to use the contact form below to place an order or if you have any questions. Your email will be answered as soon as possible! Thanks for your interest.
     
-  .feedback
-    %form.brown_border{:name => "feedback", :id => "feedback", :action => "/contact", :method => "post"}
-      %fieldset
-        %label{:for => "email"} Email Address:
-        %input.email.round{:type => "text", :name => "email"}
-        %textarea.message.round{:name => "message"}
-        %input.brown_border{:type => "submit", :value => "Send Us A Message", :class => "button"}
+.feedback
+  %form.brown_border{:name => "feedback", :id => "feedback", :action => "/contact", :method => "post"}
+    %fieldset
+      %label{:for => "email"} Email Address:
+      %input.email.round{:type => "text", :name => "email"}
+      %textarea.message.round{:name => "message"}
+      %input.brown_border{:type => "submit", :value => "Send Us A Message", :class => "button"}

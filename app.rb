@@ -71,15 +71,19 @@ class App < Sinatra::Base
   get '/contact' do
     @title = "Fortunately Sweet : Contact Us"
     @email_sent = params[:email_sent]
+    @try_again = params[:try_again]
     haml :contact, :layout => :'layouts/default'
   end
   
   post '/contact' do
-    Notifier.feedback(
-      params[:email],
-      params[:message]
-    ).deliver
-    
+    begin
+      Notifier.feedback(
+        params[:email],
+        params[:message]
+      ).deliver
+    rescue
+      return redirect '/contact?try_again=true'
+    end
     redirect '/contact?email_sent=true'
   end
 
