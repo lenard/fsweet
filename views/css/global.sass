@@ -168,25 +168,70 @@ footer
 
 // CONTACT US
 
+
+#feedback
+  padding: 10px
+  background: #fff
+
+
 .feedback
   margin-top: 10px
-  textarea
-    width: 430px
-    height: 150px
-    clear: both
-    margin-top: 5px
   label
     width: 100px
-    padding-right: 15px
-  .email
-    width: 320px
-  .subject
-    width: 335px
+    float: left
+    padding-right: 10px
+    margin-top: 8px
+    font-family: Arial, Verdana
+    font-size: 12px
+    text-align: right
+  input.email
+    width: 300px
+    float: right
+    line-height: 20px
+    font-size: 13px
+    padding: 5px
+    margin-right: 5px
+    -moz-box-shadow: 0px
+    -webkit-box-shadow: 0px
+  textarea.message
+    width: 415px
+    height: 150px
+    clear: both
+    margin-top: 10px
+    margin-left: 4px
+    padding: 5px
+  input[type=submit]
+    width: 185px
+    height: 52px
+    float: right
+    padding: 10px 15px
+    margin: 8px 5px 0px 0
+    font-weight: bold
+    font-size: 13px
     
+    background: -moz-linear-gradient(top, $light_pink 0%, $logo_pink 100%) /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$light_pink), color-stop(100%,$logo_pink)) /* webkit */
+    cursor: pointer
+  
 .left_text
   text-align: left
   
 
+
+
+.round
+  border: 1px solid $dark_brown
+  border-radius: 5px
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
+
+.brown_border
+  /* Border style */
+  border: 2px solid $dark_brown
+  -moz-border-radius: 7px
+  -webkit-border-radius: 7px
+  border-radius: 7px
+  
 
 
 
