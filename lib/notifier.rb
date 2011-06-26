@@ -3,7 +3,7 @@ class Notifier < ActionMailer::Base
   def feedback(from, message)
     mail(
       :to => 'FortunatelySweet@gmail.com',
-      # :from => 'fsweet@gmail.com', # doesn't work !
+      :from => from, #'fsweet@gmail.com'
       :reply_to => from, #'FortunatelySweet@gmail.com',
       :subject => "Website Feedback"
     ) do |format|
