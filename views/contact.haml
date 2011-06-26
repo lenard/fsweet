@@ -1,27 +1,44 @@
 .container_12{:style=>"height:350px"}
-  .grid_6{:style=>"height:350px"}
+  .grid_6.left_text{:style=>"height:350px"}
     
-    #rotate
-      = photo("a.png")
-      = photo("diffcolours.png")
-      = photo("vanilla.png")
+    / #rotate
+    /   = photo("a.png")
+    /   = photo("diffcolours.png")
+    /   = photo("vanilla.png")
       
+    %div{:style=>"height:10px"}
+    %p
+      = img("flowersbrown.png")
+      .clear
+
+    - if @email_sent
+      %p{:style=>"color:green "}
+        %strong Your message has been sent! Thanks!
+    - else
+      %p
+        Feel free to use the contact form below to place an order or if you have any questions. Your email will be answered as soon as possible! Thanks for your interest.
+        
+      .feedback
+        %form{:name => "feedback", :id => "feedback", :action => "/contact", :method => "post"}
+          %fieldset
+            %label{:for => "email"} Email Address
+            %input{:type => "text", :name => "email", :class => "email"}
+            %textarea{:name => "message"}
+            %input{:type => "submit", :value => "Send Message", :class => "button"}
+    
       
   .grid_6
     .right_text
-      %p
-        = img("flowersbrown.png")
-        .clear
+      / %p
+      /   = img("flowersbrown.png")
+      /   .clear
+      %div{:style=>"height:39px"}
       
       %p
         Fortunately Sweet is currently an online shop without a store front location at this time.
-      %br
-      
-      %p
         Feel free to contact us in one of the ways below. We look forward to hearing from you!
-      %br
         
-      %p
+      %p{:style=>"margin-top:8px"}
         .left{:style=>"margin-left:2px"}= img("email.png")
         %span.grid_2{:style=>"margin-top:10px;margin-left:6px"} Fortunatelysweet@gmail.com
         .clear
@@ -29,11 +46,11 @@
         
       %p
         .left= img("facebook_32.png")
-        %span.grid_2{:style=>"margin-top:10px;margin-left:4px"}= link_to 'Join us on facebook', "http://www.facebook.com/pages/Fortunately-Sweet/131772926834814"
+        %span.grid_2{:style=>"margin-top:10px;margin-left:4px"}= link_to 'Join us on facebook', "http://www.facebook.com/Fortunately-Sweet"
         .clear
       
       %p
         .left= img("twitter_32.png")
         %span.grid_4{:style=>"margin-top:10px;margin-left:4px"}= link_to 'Follow us on twitter @Fortunatelyswt', "http://twitter.com/#!/fortunatelyswt"
         .clear
-        
+      
