@@ -1,13 +1,11 @@
 .container_12{:style=>"height:350px"}
   .grid_6{:style=>"height:350px"}
     
-    #rotate
-      = photo("sugar.jpg")
-      = photo("cupcakeliner.jpg")
+    / #rotate
+    /   = photo("sugar.jpg")
+    /   = photo("cupcakeliner.jpg")
       
-      
-  .grid_6
-    .right_text
+    .left_text.justify
       %p
         = img("flowersbrown.png")
         .clear
@@ -17,23 +15,71 @@
         heart.
       %br
       
+      .left= img("pricing_title.png")
+      
+      .clearfix{:style=>"line-height:25px"}
+        Standard with our signature swirl - $18/dozen
+        %br
+        With simple decorations, cutouts or piping - $24/dozen
+        %br
+        Highly decorated cupcakes start at $30/ dozen and the price increases as the level of difficulty increases.
+        %br
+        Cake Pops
+        One dozen $24, two dozen $45, three dozen $65
+      
+      
       / %p
       /   For your next birthday, dinner party, wedding or shower, we welcome
       /   the opportunity to cater your event and add that special touch.
       / %br
       
-      %p
-        Costs range from $1.50 to $2.50 per cupcake, dependent upon the detail
-        of design. For special orders, we will work with you to create what
-        you are looking for at just the right cost.
-      %br
+      / %p
+      /   Costs range from $1.50 to $2.50 per cupcake, dependent upon the detail
+      /   of design. For special orders, we will work with you to create what
+      /   you are looking for at just the right cost.
+      / %br
       
-      %p
-        We feature the following flavours:
+      / %p
+      /   We feature the following flavours:
+      / 
+      / %div{:style=>"margin-top:14px;margin-left:46px"}
+      /   .left= img("vb.png")
+      /   .left= img("hc.png")
+      /   /.left= img("sl.png")
+      /   .left= img("ll.png")
+      /   .left= img("rv.png")
+    
+  .grid_6
+    .left= img("flavors_title.png")
+    
+    %div{:style=>"text-align:left"}
       
-      %div{:style=>"margin-top:14px;margin-left:46px"}
-        .left= img("vb.png")
-        .left= img("hc.png")
-        /.left= img("sl.png")
-        .left= img("ll.png")
-        .left= img("rv.png")
+      .left
+        .left= img("vbgraphic.png")
+        .grid_4.left.justify{:style=>"width:360px;margin-top:10px"}
+          Vanilla bean infused cupcakes topped with our 
+          signature vanilla bean or choclate icing. 
+          A must have!
+      
+      .left
+        .left= img("ccgraphic.png")
+        .grid_4.left.justify{:style=>"width:360px;margin-top:0px"}
+          Heavenly chocolate cupcakes infused with milk 
+          chcolate chips makes this a choclate lovers 
+          delight! Topped with our signature vanilla or 
+          chocolate icing. Simply yummy!
+      
+      .left
+        .left= img("llgraphic.png")
+        .grid_4.left.justify{:style=>"width:360px;margin-top:10px"}
+          Tangy lemon cake topped with delicious vanilla 
+          bean icing. Lemon lovers take note! This is a 
+          lemony treat!
+      
+      .left
+        .left= img("bmgraphic.png")
+        .grid_4.left.justify{:style=>"width:360px;margin-top:5px"}
+          Red velvet cupcakes with white chocolate chips 
+          in the cake! Lucious cream cheese frosting tops 
+          it off. Love at first bite!
+    
